@@ -11,7 +11,6 @@ Server:-NodeJS(express)
 #How to run
 1)git clone repository
 2)npm i
-
-
- 
-
+3)Please run server.js for express server on seprate terminal path:minal./src . 
+4)Please run ng serve on project path on 
+seprate terminal.
