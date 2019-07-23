@@ -1,0 +1,18 @@
+<div class="container-fluid">
+  <h1>TO DO LIST</h1>
+  <button type="button" class="btn btn-default" style="margin:5px 5px 5px 5px" (click)="toogle()">+</button>
+  <button type="button" class="btn btn-default" style="margin:5px 5px 5px 5px" (click)="logout()">Logout</button>
+  
+  <div class="form-group" *ngIf="createTodoFlag">
+      <label for="comment">Comment:</label>
+      <textarea class="form-control" (change)="Text($event)" rows="2" id="comment"></textarea>
+      <button type="button" class="btn btn-default"  style="margin:5px 5px 5px 5px" (click)="create()">Create</button>
+    </div>
+  <div class="row">
+    <div class="col-sm-2 cl"  *ngFor="let list of todoListArray;let i=index" style="border-radius:15px;background-color:lavender; height:200px;margin:10px 10px 10px 10px">
+      {{list.title}}    
+        <button type="button" class="btn show" style="margin:5px 0px 5px 70px" (click)="deleteTodo(list,i)">Delete</button>
+    </div>
+  </div>  
+    
+</div>
